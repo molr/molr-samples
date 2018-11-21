@@ -12,7 +12,7 @@ dependencies {
     compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: log4jVersion
 
     compile project(":old-supervisor-api")
-    compile project(":molr-mole-core")
+    compile "org.molr:molr-mole-core:+"
 
     // TODO BE REMOVED
     compile project(":old-sample")
