@@ -111,7 +111,7 @@ public class SequenceMoleAdapter implements Mole {
 
 
     private final Optional<MissionState> orgStateFrom(MissionHandle handle, cern.molr.commons.api.response.MissionState cernState) {
-        MissionState.Builder builder = MissionState.builder();
+        MissionState.Builder builder = MissionState.builder(Result.UNDEFINED);
         if (cernState instanceof SequenceMissionState) {
             Mission mission = runningMissions.get(handle);
             if (mission == null) {
@@ -187,9 +187,6 @@ public class SequenceMoleAdapter implements Mole {
         }
         return Optional.empty();
     }
-
-    ;
-
 
     private final MissionImpl cernMissionFrom(Mission mission) {
         return new MissionImpl(SequenceMole.class.getName(), missions.get(mission).getClass().getName());
