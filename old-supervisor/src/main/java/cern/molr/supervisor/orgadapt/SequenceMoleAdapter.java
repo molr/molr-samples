@@ -109,6 +109,11 @@ public class SequenceMoleAdapter implements Mole {
         }
     }
 
+    @Override
+    public void instructRoot(MissionHandle handle, StrandCommand command) {
+        instruct(handle, MAIN_STRAND, command);
+    }
+
 
     private final Optional<MissionState> orgStateFrom(MissionHandle handle, cern.molr.commons.api.response.MissionState cernState) {
         MissionState.Builder builder = MissionState.builder(Result.UNDEFINED);
