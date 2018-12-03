@@ -3,6 +3,6 @@ dependencies {
     compile project(":old-commons-api")
     compile project(":old-client")
 
-    compile "org.molr:molr-mole-core:+"
-    compile "org.molr:molr-agency-server:+"
+    compile group: 'org.molr', name: 'molr-mole-core', version: molrVersion
+    compile group: 'org.molr', name: 'molr-agency-server', version: molrVersion
 }
