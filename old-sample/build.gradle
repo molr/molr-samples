@@ -4,5 +4,5 @@ dependencies {
     compile project(":old-client")
 
     compile group: 'org.molr', name: 'molr-mole-core', version: molrVersion
-    compile group: 'org.molr', name: 'molr-agency-server', version: molrVersion
+    compile group: 'org.molr', name: 'molr-mole-server', version: molrVersion
 }
