@@ -38,12 +38,6 @@ subprojects {
     }
 }
 
-subprojects {
-    jar {
-
-    }
-}
-
 subprojects.each { subproject -> evaluationDependsOn(subproject.path) }
 task projectJar(type: Jar, dependsOn: subprojects.jar) {
 
