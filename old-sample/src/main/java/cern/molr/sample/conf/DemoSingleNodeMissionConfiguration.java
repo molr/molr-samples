@@ -1,11 +1,11 @@
 package cern.molr.sample.conf;
 
 import cern.molr.sample.mission.*;
-import org.molr.mole.core.single.SingleNodeMission;
+import io.molr.mole.core.single.SingleNodeMission;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import static org.molr.commons.domain.Placeholder.anInteger;
+import static io.molr.commons.domain.Placeholder.anInteger;
 
 @Configuration
 public class DemoSingleNodeMissionConfiguration {

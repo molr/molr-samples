@@ -1,6 +1,6 @@
 package org.molr.agency.server.rest;
 
-import org.molr.commons.domain.dto.TestValueDto;
+import io.molr.commons.domain.dto.TestValueDto;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.ClientResponse;
 import org.springframework.web.reactive.function.client.WebClient;
