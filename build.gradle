@@ -6,7 +6,7 @@ allprojects {
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
 
-    group = "org.molr"
+    group = "io.molr"
 
     repositories {
         mavenCentral()
