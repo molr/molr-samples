@@ -1,4 +1,5 @@
 // Old
 include "old-server-api", 'old-test', 'old-demo', 'old-sample', "old-commons", "old-client", "old-commons-api", "old-supervisor", "old-client-api", "old-server-api"
 include "old-supervisor-api", "old-server"
+include 'molr-demo'
 

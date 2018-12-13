@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'io.molr'
+version 'unspecified'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.minifx', name: 'minifx-workbench', version: '+'
+
+    compile group: 'io.molr', name: 'molr-mole-core', version: '0.2.0'
+    compile group: 'io.molr', name: 'molr-mole-junit5', version: '+'
+
+    compile group: 'io.molr', name: 'molr-gui-fx', version: '0.2.0'
+
+}
