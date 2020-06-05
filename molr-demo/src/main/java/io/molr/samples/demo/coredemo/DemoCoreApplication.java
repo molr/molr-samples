@@ -105,7 +105,7 @@ public class DemoCoreApplication {
 
     @Bean
     public Mole singleNodeMole(Set<SingleNodeMission<?>> missions, Set<RunnableLeafsMission> runnableLeafsMissions, Set<JUnit5Mission> junit5Missions) {
-        return new LocalSuperMole(ImmutableSet.of(new SingleNodeMole(missions), new RunnableLeafsMole(runnableLeafsMissions), new JUnit5Mole(junit5Missions), new RestRemoteMole("http://localhost:8800")));
+        return new LocalSuperMole(ImmutableSet.of(new SingleNodeMole(missions), new RunnableLeafsMole(runnableLeafsMissions), new JUnit5Mole(junit5Missions), new RestRemoteMole("http://localhost:8889")));
         //return new LocalSuperMole(ImmutableSet.of(new SingleNodeMole(missions), new RunnableLeafsMole(runnableLeafsMissions), new JUnit5Mole(junit5Missions)));
 
     }
