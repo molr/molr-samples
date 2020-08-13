@@ -7,6 +7,7 @@ import io.molr.mole.core.api.Mole;
 import io.molr.mole.core.local.LocalSuperMole;
 import io.molr.mole.core.runnable.RunnableLeafsMission;
 import io.molr.mole.core.runnable.RunnableLeafsMole;
+import io.molr.mole.core.runnable.demo.conf.DemoRunnableLeafsConfiguration;
 import io.molr.mole.core.runnable.lang.RunnableLeafsMissionSupport;
 import io.molr.mole.core.single.SingleNodeMission;
 import io.molr.mole.core.single.SingleNodeMole;
@@ -25,7 +26,7 @@ import static io.molr.commons.domain.MissionParameter.required;
 import static io.molr.commons.domain.Placeholder.anInteger;
 
 @Configuration
-@Import(MolrGuiBaseConfiguration.class)
+@Import({MolrGuiBaseConfiguration.class, DemoRunnableLeafsConfiguration.class})
 public class DemoCoreApplication {
 
 
@@ -105,8 +106,8 @@ public class DemoCoreApplication {
 
     @Bean
     public Mole singleNodeMole(Set<SingleNodeMission<?>> missions, Set<RunnableLeafsMission> runnableLeafsMissions, Set<JUnit5Mission> junit5Missions) {
-        return new LocalSuperMole(ImmutableSet.of(new SingleNodeMole(missions), new RunnableLeafsMole(runnableLeafsMissions), new JUnit5Mole(junit5Missions), new RestRemoteMole("http://localhost:8889")));
-        //return new LocalSuperMole(ImmutableSet.of(new SingleNodeMole(missions), new RunnableLeafsMole(runnableLeafsMissions), new JUnit5Mole(junit5Missions)));
+        //return new LocalSuperMole(ImmutableSet.of(new SingleNodeMole(missions), new RunnableLeafsMole(runnableLeafsMissions), new JUnit5Mole(junit5Missions), new RestRemoteMole("http://localhost:8889")));
+        return new LocalSuperMole(ImmutableSet.of(new SingleNodeMole(missions), new RunnableLeafsMole(runnableLeafsMissions), new JUnit5Mole(junit5Missions)));
 
     }
 
