@@ -34,7 +34,8 @@ public class GsiDemo {
 
     @Bean
     public Mole mole(Set<SingleNodeMission<?>> singleNodeMissions, Set<RunnableLeafsMission> runnableLeafsMissions, Set<JUnit5Mission> junitMissions) {
-        return new LocalSuperMole(ImmutableList.of(new SingleNodeMole(singleNodeMissions), new RunnableLeafsMole(runnableLeafsMissions), new JUnit5Mole(junitMissions), new RestRemoteMole("http://localhost:8800")));
+        return new LocalSuperMole(ImmutableList.of(new SingleNodeMole(singleNodeMissions), new RunnableLeafsMole(runnableLeafsMissions), new JUnit5Mole(junitMissions)));
+        //return new LocalSuperMole(ImmutableList.of(new SingleNodeMole(singleNodeMissions), new RunnableLeafsMole(runnableLeafsMissions), new JUnit5Mole(junitMissions), new RestRemoteMole("http://localhost:8800")));
     }
 
     @Bean
